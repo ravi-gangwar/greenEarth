@@ -1,0 +1,55 @@
+.main-card{
+    background-color: lightseagreen;
+    height: 30vh;
+    width:18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+.box-card{
+    height: 90%;
+    width: 90%;
+    text-align: center;
+}
+.box-card img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition:400ms;
+}
+.box-card img:hover{
+    transform:scale(1.08);
+}
+.cardBtns{
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+.plantBtn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 2px;
+    transiton:400ms;
+}
+.plantBtn:hover{
+    transform:scale(1.10);
+    background-color:lightcoral;
+
+}
+.bucketBtn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 2px;
+    transiton:400ms;
+}
+.bucketBtn:hover{
+    transform: scale(1.10);
+    background-color: lightcoral;
+}
