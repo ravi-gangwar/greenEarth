@@ -141,21 +141,19 @@ const Login = () => {
                 { 
                 changePasswordState ? (
                     <>
-                    <label>
                         <input
                             type={showPassword ? 'text' : 'password'}
                             placeholder='Enter New Password'
                             value={newPassword}
                             onChange={(e) => setNewPassword(e.target.value)}
                         />
-                        <button onClick={handleTogglePassword}>
-                            {showPassword ? 'Hide' : 'Show'} Password
-                        </button>
-                    </label>
                     <input 
                     type={showPassword ? 'text' : 'password'} 
                     placeholder='Confirm New Password' 
                     value={comfirmNewPassword} onChange={(e)=> setConfirmNewPassword(e.target.value)}></input>
+                    <button className='password-toggle-btn' onClick={handleTogglePassword}>
+                        {showPassword ? 'Hide' : 'Show'} Password
+                    </button>
                     <p className='forget-password' onClick={()=> window.location.reload(false)}><span>Back to Login page.</span> click here!!</p>
                     </>
                 ) :
@@ -239,9 +237,7 @@ const Login = () => {
                     ) :
                     reset ? (<button className='signbtn' type='' onClick={handleReset}>Send OTP</button>) : (
                         <>
-                            <div className='orDiv'><span><hr/></span><p>OR</p><span><hr/></span></div>
-                            <p className='para1'>People who use our service may have uploaded<br/> your contact information to<br/> Instagram. <Link to="#">Learn more</Link></p>
-                            <p className='para2'>By signing up, you agree to our <Link to='#'>Terms</Link>, <br/><Link to='#'>Privacy Policy</Link> and <Link to='#'>Cookies Policy.</Link></p>
+                            {/* <div className='orDiv'><span><hr/></span><p>OR</p><span><hr/></span></div> */}
                             {state==="Log In" ? 
                                 <button className='signbtn' type='' onClick={handleLogin}>Log In</button> :
                                 <button className='signbtn' type={loading === true ? "button" : "submit"} disabled={loading === true} onClick={handleSignup}>
