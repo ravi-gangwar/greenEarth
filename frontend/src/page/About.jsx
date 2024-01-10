@@ -20,7 +20,7 @@ function About() {
           Join us in making a lasting difference. Purchase your greenEarth <Link to="/get-membership">Membership</Link> today and become a vital part of the sustainable movement that goes beyond online transactions.
           Thank you for considering greenEarth, where every purchase plants a seed of change.
         </p>
-        <h2>click ⬆ to read more!!</h2>
+        <h2 className='readMore-about'>click ⬆ to read more!!</h2>
           <img src="https://github.com/ravi-gangwar/greenEarth/blob/main/frontend/src/assets/green-earth.png?raw=true" alt="" />
       </div>
       </div>
