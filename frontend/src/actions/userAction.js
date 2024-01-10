@@ -126,3 +126,26 @@ export const makeWorkerAction = (userId) => async dispatch => {
         dispatch({type: "MAKE_WORKER_FAIL", payload: error});
     }
 }
+
+
+export const updateUserAction = ({updatedUser, formData}) => async (dispatch) => {
+  dispatch({ type: 'EDIT_USER_REQUEST' });
+
+  try {
+    let res;
+    const updateProfileRes = await axios.post(`${BASE_URL}/api/upload/profile-upload`, formData);
+    if(updateProfileRes){
+        updatedUser = {
+            ...updatedUser,
+            avatar: updateProfileRes.data.data[0]
+        }
+        res = await axios.post(`${BASE_URL}/api/auth/update-user`, updatedUser);
+    }
+
+    dispatch({ type: 'EDIT_USER_SUCCESS', payload: res.data });
+    window.location.reload(false);
+  } catch (error) {
+    dispatch({ type: 'EDIT_USER_IMAGE_FAIL', payload: error });
+  }
+};
+

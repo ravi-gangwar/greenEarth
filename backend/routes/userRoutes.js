@@ -130,6 +130,9 @@ userRouter.post("/login", async (req, res) => {
                     isWorker: user.isWorker,
                     isMember : user.isMember,
                     isMembership : user.isMembership,
+                    avatar : user.avatar,
+                    phone : user.phone,
+                    dob: user.dob,
                 };
                 LoginMailer(email);
 
@@ -471,6 +474,34 @@ userRouter.post('/make-worker', async (req, res) => {
         console.error('Error:', error);
         return res.status(500).json({
             message: "Server Error while making worker",
+            error: error,
+        });
+    }
+});
+
+
+userRouter.post('/update-user', async (req, res) => {
+    const {_id, name, email, avatar, address, phone, dob} = req.body;
+    try {
+            const EditUser = await userModel.findOneAndUpdate({_id}, {name: name, email: email, avatar: avatar, address: address, phone: phone, dateOfBirth: dob},
+                {new : true});
+            if(EditUser){
+                return res.status(200).json({
+                    message: "User Edited!",
+                    success: true,
+                    data : EditUser,
+                })
+            }else{
+                return res.status(404).json({
+                    message: "Error while user edit",
+                    success: false
+                })
+            }
+
+    } catch (error) {
+        console.error('Error:', error);
+        return res.status(500).json({
+            message: "Server Error while user editing",
             error: error,
         });
     }

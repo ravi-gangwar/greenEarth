@@ -261,3 +261,31 @@ export const makeWorkerReducer  = (state = {}, action)=> {
             return state;
     }
 }
+
+
+export const updateUserImageReducer  = (state = {}, action)=> {
+    switch(action.type){
+        case "EDIT_USER_REQUEST":
+            return {
+                ...state,
+                upadateUserImgloading :true,
+                upadateUserImgsuccess : null,
+                upadateUserImgerror : null
+            }
+        case "EDIT_USER_SUCCESS":
+            return{
+                ...state,
+                upadateUserImgloading :false,
+                upadateUserImgsuccess : true,
+                upadateUserImgerror : null
+            }
+        case "EDIT_USER_FAIL" :
+            return{
+                upadateUserImgloading :false,
+                upadateUserImgsuccess : false,
+                upadateUserImgerror : action.payload
+            }
+        default :
+            return state;
+    }
+}

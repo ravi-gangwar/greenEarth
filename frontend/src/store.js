@@ -27,6 +27,7 @@ import { getMembershipReducer } from "./reducers/getMembershipReducer.js";
 import { searchTreeReducer } from "./reducers/searchTreeReducer.js";
 import { cancelOrderReducer } from "./reducers/orderReducer.js";
 import { getTreeWithTypeReducer } from "./reducers/treeReducers";
+import { updateUserImageReducer } from "./reducers/userReducer";
 
 
 
@@ -56,7 +57,8 @@ const rootReducer = combineReducers({
     getMembershipReducer,
     searchTreeReducer,
     cancelOrderReducer,
-    getTreeWithTypeReducer
+    getTreeWithTypeReducer,
+    updateUserImageReducer
     
 
 

@@ -8,19 +8,40 @@
 .profile-div{
     position: relative;
     height: 70vh;
-    width: 70%;
+    width: 300px;
     text-align: center;
     background-color: rgb(48, 48, 48);
     padding: 20px;
     border-radius: 10px;
     box-shadow: rgba(28, 27, 27, 0.546) 0px 0px 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
 
-.profile-img{
-    height: 100px;
-    width: 100px;
+.user-profile-div{
+    height: 150px;
+    width: 150px;
     object-fit: cover;
     border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.user-profile-div img {
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+
+}
+.user-profile-div input{
+    height: 90%;
+    width: 90%;
 }
 .edit-btn{
     position: absolute;
@@ -55,4 +76,11 @@
     margin-left: 10px;
     color: #afafaf;
     text-decoration: underline;
+}
+.profile-spans input {
+    background-color: #565656;
+    border: none;
+    border-radius: 5px;
+    color: azure;
+    width: fit-content;
 }

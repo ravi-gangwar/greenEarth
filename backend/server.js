@@ -9,6 +9,7 @@ import  cors from 'cors'
 import userRouter from "./routes/userRoutes.js";
 import orderRouter from "./routes/orderRoute.js";
 import contactRouter from "./routes/contactRouter.js";
+import uploaderController from "./routes/uploaderController.js";
 
 const app = express();
 
@@ -44,6 +45,7 @@ app.use('/api/trees', router);
 app.use('/api/auth', userRouter);
 app.use('/api/orders', orderRouter);
 app.use('/api/user-message', contactRouter);
+app.use('/api/upload', uploaderController)
 
 
 

@@ -3,6 +3,9 @@ import mongoose from "mongoose";
 const {Schema} = mongoose;
 
 const userSchema = new Schema({
+    avatar: {
+        type : String
+    },
     email : {
         type : String,
         require: [true, "user email must be required"],
@@ -15,6 +18,9 @@ const userSchema = new Schema({
         minLength: [3, "name min length 5 char"],
         maxLength: [15, "name must be less than 15 char"],
         trim: true
+    },
+    DateOfBirth: {
+        type: String
     },
     password : {
         type : String,
@@ -36,6 +42,12 @@ const userSchema = new Schema({
     isMembership: {
         type: String,
         default: "none",
+    },
+    address: {
+        type: Object,
+    },
+    phone: {
+        type: Number
     }
 },{
     timestamps: true

@@ -105,7 +105,11 @@ nav ul li:hover {
 
 .userIcon{
   color: azure;
-  font-size:33px;
+  margin-top: 2px;
+  height: 30px;
+  width: 30px;
+  border: 2px solid limegreen;
+  border-radius: 50%;
 }
 .dropdown {
   height: 100%;
@@ -227,8 +231,9 @@ nav ul {
     width: 45%;
   }
   .userIcon {
-    margin-top: 5px;
-    font-size: 35px;
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
   }
   .inner-side-bar-div{
     font-size: 15px;

@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import '../style/navBar.css';
 import { logoutAction } from '../actions/userAction';
 import { useDispatch } from 'react-redux';
-import { FaUserCircle } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 
@@ -71,7 +70,7 @@ function NavBar() {
         <>
         <div className="dropdown">
           <button className="dropbtn">
-          <FaUserCircle className='userIcon'onMouseOver={() =>sideBar === true ? setSideBar(false) : ""} onClick={() => sideBar === true ? setSideBar(false) : ""}/>
+          <img src={currentUser.data.avatar || "https://i.pinimg.com/564x/e8/7a/b0/e87ab0a15b2b65662020e614f7e05ef1.jpg"} className='userIcon' onMouseOver={() =>sideBar === true ? setSideBar(false) : ""} onClick={() => sideBar === true ? setSideBar(false) : ""}/>
           </button>
             <div className="dropdown-content">
             <Link className="linksTag-dropDown" to="/profile">Profile</Link>

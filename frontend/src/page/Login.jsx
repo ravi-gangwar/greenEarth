@@ -8,7 +8,7 @@ import Loader from '../components/Loader';
 const Login = () => {
 
     const otpVerifyState = useSelector((state)=> state.otpVerifyReducer)
-    const { otpVerifyloading, otpVerifysuccess, otpVerifyerror} = otpVerifyState;
+    const { otpVerifyloading, otpVerifysuccess } = otpVerifyState;
     useEffect(()=> {
         if(otpVerifysuccess === true) 
         {
@@ -46,7 +46,7 @@ const Login = () => {
         }
     }
     const changePassState = useSelector((state)=> state.changePasswordReducer)
-    const {changePasswordloading, changePasswordsuccess, changePassworderror} = changePassState;
+    const {changePasswordloading, changePasswordsuccess } = changePassState;
     if(changePasswordsuccess === true){
         window.location.reload(false);
     }
@@ -61,7 +61,7 @@ const Login = () => {
 
 
     const loginState = useSelector((state)=> state.loginUserReducer)
-    const {loginLoading,currentUser, loginSuccess, loginError} = loginState;
+    const {loginLoading, loginSuccess, loginError} = loginState;
 
     const handleLogin = ()=> {
         const user = {email, password};
@@ -76,10 +76,13 @@ const Login = () => {
         if(loginError){
             alert("Email or Password not matched")
         }
+        if(loginSuccess){
+            alert("You are logged in.")
+        }
             
-    }, [loginError])
+    }, [loginError, loginSuccess])
 
-    const {loading, success, error} =  useSelector((state)=> state.signupReducer)
+    const {loading, success} =  useSelector((state)=> state.signupReducer)
     const handleSignup = ()=> {
         if(email===""|| password === "" || password === "" || confirmPassword === ""){
             alert("Fill all fields!!")
