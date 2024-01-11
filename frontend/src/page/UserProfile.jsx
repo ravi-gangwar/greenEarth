@@ -45,6 +45,7 @@ function UserProfile() {
 }
   
   function handleProfile() {
+    alert("Here some bugs we fix soon!!!!!⛔⛔⛔")
     const formData = new FormData();
     formData.append('userProfile', userInfo.avatar);
     dispatch(updateUserAction({updatedUser, formData}));    
