@@ -130,11 +130,13 @@ export const makeWorkerAction = (userId) => async dispatch => {
 
 export const updateUserAction = ({updatedUser, formData}) => async (dispatch) => {
   dispatch({ type: 'EDIT_USER_REQUEST' });
-
   try {
     let res;
-    const updateProfileRes = await axios.post(`${BASE_URL}/api/upload/profile-upload`, formData);
-    if(updateProfileRes){
+    let updateProfileRes;
+    if(formData){
+        updateProfileRes = await axios.post(`${BASE_URL}/api/upload/profile-upload`, formData);
+    }
+    if(updatedUser || (formData && updateProfileRes)){
         updatedUser = {
             ...updatedUser,
             avatar: updateProfileRes.data.data[0]

@@ -2,12 +2,18 @@ import "../style/profileUser.css";
 import { FaEdit } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateUserAction } from "../actions/userAction";
 
 
 function UserProfile() {
+  useEffect(()=> {
+    if(!currentUser) {
+      window.location.href = "/login";
+    } 
+  })
+
   const userState = useSelector((state) => state.loginUserReducer);
   const { currentUser } = userState;
   const dispatch = useDispatch();
@@ -19,17 +25,17 @@ function UserProfile() {
     email : currentUser.data.email,
     dob: "",
     address: {
-      city: "" || "Set the City",
-      state: "" || "Set the state",
-      pincode: ""|| "Set the pincode",
-      landmark: ""|| "Set the landmark"
+      city: "",
+      state: "" ,
+      pincode: "",
+      landmark: ""
     },
     phone: +910000000000,
   });
   console.log(userInfo.dob)
 
   const updatedUser = {
-    avatar: userInfo.avatar,
+    avatar: userInfo.avatar || currentUser.data.avatar,
     name: userInfo.name,
     email: userInfo.email,
     dob : userInfo.dob,
@@ -103,7 +109,12 @@ function UserProfile() {
           <span className="profile-spans">
             Address:
             {profileEdit ? (
-              <input value={userInfo.address} onChange={(e) => setUserInfo({ ...userInfo, address: e.target.value })} />
+              <div className="address-about">
+                <input value={userInfo.address.city} placeholder="City" onChange={(e) => setUserInfo({ ...userInfo, address : {...userInfo.address, city: e.target.value} })} />
+                <input value={userInfo.address.state} placeholder="State" onChange={(e) => setUserInfo({ ...userInfo, address : {...userInfo.address, state: e.target.value} })} />
+                <input value={userInfo.address.pincode} placeholder="Pincode" onChange={(e) => setUserInfo({ ...userInfo, address : {...userInfo.address, pincode: e.target.value} })} />
+                <input value={userInfo.address.landmark} placeholder="Landmark" onChange={(e) => setUserInfo({ ...userInfo, address : {...userInfo.address, landmark: e.target.value} })} />
+              </div>
             ) : (
               <h4>{}</h4>
             )}
