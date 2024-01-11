@@ -128,23 +128,24 @@ export const makeWorkerAction = (userId) => async dispatch => {
 }
 
 
-export const updateUserAction = ({updatedUser, formData}) => async (dispatch) => {
+export const updateUserAction = ({updatedUser, /*formData*/}) => async (dispatch) => {
   dispatch({ type: 'EDIT_USER_REQUEST' });
   try {
     let res;
-    let updateProfileRes;
-    if(formData){
-        updateProfileRes = await axios.post(`${BASE_URL}/api/upload/profile-upload`, formData);
-    }
-    if(updatedUser || (formData && updateProfileRes)){
-        updatedUser = {
-            ...updatedUser,
-            avatar: updateProfileRes.data.data[0]
-        }
+    // let updateProfileRes;
+    // if(formData){
+    //     updateProfileRes = await axios.post(`${BASE_URL}/api/upload/profile-upload`, formData);
+    // }
+    // if(updatedUser || (formData && updateProfileRes)){
+    //     updatedUser = {
+    //         ...updatedUser,
+    //         avatar: updateProfileRes.data.data[0]
+    //     }
         res = await axios.post(`${BASE_URL}/api/auth/update-user`, updatedUser);
-    }
+    // }
 
     dispatch({ type: 'EDIT_USER_SUCCESS', payload: res.data });
+    alert("We are using free Deployment of our server so cant upload your profile picture.⛔⛔")
     window.location.reload(false);
   } catch (error) {
     dispatch({ type: 'EDIT_USER_IMAGE_FAIL', payload: error });

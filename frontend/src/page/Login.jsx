@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom'
 import Loader from '../components/Loader';
 
 const Login = () => {
-
     const otpVerifyState = useSelector((state)=> state.otpVerifyReducer)
     const { otpVerifyloading, otpVerifysuccess } = otpVerifyState;
     useEffect(()=> {
@@ -74,7 +73,7 @@ const Login = () => {
     }
     useEffect(()=>{ 
         if(loginError){
-            alert("Email or Password not matched")
+            alert("Email or Password not matched⛔⛔")
         }
         if(loginSuccess){
             alert("You are logged in.")
@@ -91,7 +90,6 @@ const Login = () => {
         if(password !== confirmPassword){
             alert("Confirm Password not matched")
         }else{
-
         const user = {name, email, password, confirmPassword};
         dispatch(signupAction(user));
         }
@@ -244,7 +242,7 @@ const Login = () => {
                             {state==="Log In" ? 
                                 <button className='signbtn' type='' onClick={handleLogin}>Log In</button> :
                                 <button className='signbtn' type={loading === true ? "button" : "submit"} disabled={loading === true} onClick={handleSignup}>
-                                    {loading ? "Loading..." : success ? "Sign Up Successfull" : "Sign Up" }
+                                    {loading ? <Loader/> : success ? "Sign Up Successfull" : "Sign Up" }
                                 </button>
 
                             }

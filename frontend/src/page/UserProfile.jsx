@@ -45,7 +45,6 @@ function UserProfile() {
 }
   
   function handleProfile() {
-    alert("Here some bugs we fix soon!!!!!⛔⛔⛔")
     const formData = new FormData();
     formData.append('userProfile', userInfo.avatar);
     dispatch(updateUserAction({updatedUser, formData}));    
@@ -58,7 +57,7 @@ function UserProfile() {
           {profileEdit ? (
             <input
             type="file" name="userProfile"
-            onChange={(e) => setUserInfo({ ...userInfo, avatar: e.target.files[0] })}
+            onChange={(e) => setUserInfo({ ...userInfo, avatar: e.target.files[0]})}
             />
 
           ) : (
