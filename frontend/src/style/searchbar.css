@@ -1,7 +1,9 @@
 .searchBar-container {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
   align-items: center;
+  width: 30%;
 }
 .input {
   width: 100%;
@@ -11,5 +13,8 @@
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-
-
+@media (min-width: 340px) and (max-width: 606px){
+  .searchBar-container{
+      width: 80%;
+  }
+}

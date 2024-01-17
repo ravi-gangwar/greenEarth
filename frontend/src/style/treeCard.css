@@ -1,22 +1,22 @@
 .main-card{
-    background-color: rgb(58, 59, 64);
-    height: 250px;
+    background-color: rgba(190, 189, 189, 0.705);
+    height: 300px;
     width: 285px;
-    color: azure;
+    color: black;
     display: flex;
     justify-content: center;
+    padding: 10px;
     align-items: center;
     text-decoration: none;
     margin: 10px;
-    box-shadow: 0 0 10px rgba(26, 25, 25, 0.8); 
+    /* box-shadow: 0 0 10px rgba(26, 25, 25, 0.8);  */
     border-radius: 5px;
 }
-
 .box-card{
     height: 90%;
     width: 90%;
     text-align: center;
-    color: azure;
+    color: black;
 
 }
 .img-div{

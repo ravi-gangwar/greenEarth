@@ -2,13 +2,15 @@
     min-height: 100vh;
     width: 100vw;
     text-align: center;
-    color: rgb(152, 152, 152);
+    color: rgb(0, 0, 0);
 }
 .about-div-website{
     min-height: 60vh;
     border-bottom: 2px solid;
     margin-top: 60px;
     width: 100%;
+    color: black;
+    font-weight: 6600;
 }
 .about-greenearth{
     margin-top: 30px;
@@ -18,14 +20,20 @@
     padding: 20px;
 
 }
+.what-greenearth h1{
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
 .about-greenearth img{
     margin-right: 20px;
-    filter: drop-shadow(10px 10px 10px rgba(255, 255, 255, 0.429));
+    filter: drop-shadow(10px 10px 10px rgba(114, 114, 114, 0.582));
 }
 
 .about-greenearth p{
     font-size: 20px;
     padding: 0 50px;
+    color: black;
 }
 .about-greenearth img {
     height: 300px;
@@ -37,6 +45,7 @@
     width: 100%;
     margin-top: 20px;
     margin-bottom: 40px;
+    color: black;
 }
 .objective-cards{
     margin-top: 10px;
@@ -80,6 +89,10 @@
     min-height: 70vh;
 
 }
+.aboutus-team  h1{
+color: black;
+font-weight: 600;
+}
 .members-team{
     height: 70vh;
     display: flex;
@@ -109,7 +122,7 @@
 }
 .team-member-details span{
     display: flex;
-    color: rgb(154, 154, 154);
+    color: rgb(56, 56, 56);
 }
 .team-member-details span p{
     font-weight: 600;
@@ -147,6 +160,7 @@
     scroll-snap-align: start;
     box-shadow: 0 15px 25px rgba(0,0,0,0.1);
     min-height: fit-content;
+    color: black;
 }
 .about-card{
     display: flex;
@@ -154,9 +168,10 @@
     align-items: center;
     font-size: 18px;
     font-weight: 400;
-    color: #e5e5e5;
     text-align: center;
     background-color: #555555a3;
+    color: black;
+    font-weight: 700;
 }
 .about-span-card-member{
     display: flex;
@@ -164,6 +179,8 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    color: black;
+    font-weight: 700;
 }
 @media (max-width : 810px){
     .about-greenearth{

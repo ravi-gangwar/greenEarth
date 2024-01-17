@@ -11,7 +11,7 @@
 .bucketPage{
     height: fit-content;
     width: 50%;
-    color: azure;
+    color: black;
     display: flex;
     padding: 5px;
     align-items: center;
@@ -22,13 +22,17 @@
     overflow-y: auto;
 
 }
+.bucketPage h1{
+    color: black;
+    font-weight: 600;
+}
 .bucketPage::-webkit-scrollbar {
     width: 3;
   }
 .bucketItemContainer{
-    background-color: #353434b4;
-    height: 200px;
-    width: 200px;
+    background-color: #cacacada;
+    height: 250px;
+    width: 250px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -47,6 +51,7 @@
 .titile-dis-div{
     width: 80vw;
     cursor: pointer;
+    color: black;
 }
 .inc-dec-btn{
     display: flex;
@@ -92,8 +97,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: azure;
+    color: black;
     gap: 5px;
+}
+.address-div h1{
+    color: black;
+    font-weight: 500;
 }
 .inp {
     padding: 15px;
@@ -102,6 +111,10 @@
     background-color: #514e4e;
     color: azure;
 }
+.totalPriceDiv h3{
+    color: black;
+    font-weight: 500;
+}
 .pay-btn{
     padding:10px 25px;
     background-color: rgb(234, 54, 54);
@@ -109,10 +122,14 @@
     color: azure;
     font-size: 20px;
     cursor: pointer;
+    color: black;
+    font-weight:500;
     margin-left: 20px;
 }
 .pay-btn:hover {
     background-color: black;
+    color: white;
+    font-weight: 700;
 
 }
 

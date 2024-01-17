@@ -31,7 +31,6 @@ import Footer from './components/Footer';
 import axios from 'axios';
 import { useEffect } from 'react';
 
-
 function App() {
   const userState = useSelector(state => state.loginUserReducer);
   const {currentUser} = userState;
@@ -68,7 +67,7 @@ function App() {
           <NavBar/>
           <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/about' element={<About/>}/>
+            <Route path='/about' element={<About/>}/> 
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/bucket' element={<BucketPage/>}/>
             <Route path='/login' element={<Login/>}/>

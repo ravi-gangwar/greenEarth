@@ -10,10 +10,13 @@
 .contactPage h1{
     font-size: 50px;
     margin: 20px;
+    color: #1d1c1c;
+    font-weight: 500;
 }
 .contactPage p{
     font-size: 25px;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 .ContactContainer{
@@ -21,6 +24,7 @@
     width: 80%;
     height: fit-content;
     border-radius: 100px 0 0 20px;
+    font-weight: 500;
 }
 .contact-left{
     height: fit-content;
@@ -31,8 +35,9 @@
     justify-content: center;
     background-color: #ffffff;
     border-radius: 10px 0px 0 100px;
-    padding: 40px 0;
+    padding: 40px 0 0 0;
     color: black;
+    font-weight: 500;
 }
 .contact-left h3{
     font-size: 50px;
@@ -57,6 +62,7 @@
     height: 180px;
     width: 90%;
     margin-bottom: 20px;
+    border: 2px solid #1d1c1c;
 }
 .contact-input-fields button{
     width: 90%;
