@@ -56,6 +56,7 @@ function App() {
     if(currentUser){
       getLocation();
     }
+
   }, [])
 
 

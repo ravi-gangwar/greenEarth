@@ -88,16 +88,17 @@
     color: rgb(119, 103, 103);
     color: azure;
 }
+
 .signbtn{
     height: 30px;
     width: 35%;
     font-size: larger;
     border-radius: 5px;
-    background-color: #0095F6;
     border: none;
     margin-top: 30px;
-    color: white;
+    color: black;
     font-weight: 500;
+    background-color: #0095F6;
 }
 .signbtn:hover{
     cursor: pointer;

@@ -107,6 +107,7 @@
 .inp {
     padding: 15px;
     border-radius:5px;
+    width: 70%;
     font-size: 15px;
     background-color: #514e4e;
     color: azure;
