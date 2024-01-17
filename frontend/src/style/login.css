@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: azure;
+    color: black;
 
 }
 .login-container{
@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     margin-left: 15px;
-    color: azure;
+    color: black;
 
 }
 .container-2nd{
@@ -23,17 +23,17 @@
     align-items: center;
     flex-direction: column;
     height: fit-content;
-    color: azure;
+    color: black;
     width: 95%;
     /* background-color: yellow; */
-    border: 1px solid rgb(207, 193, 193);
+    border: 1px solid rgb(0, 0, 0);
     padding: 30px 0;
 }
 .h5-fisrt{
     text-align: center;
-    color: rgb(119, 103, 103);
+    color: rgb(0, 0, 0);
     font-size: larger;
-    color: azure;
+    color: rgb(0, 0, 0);
     margin: 2%;
 }
 .facebook-log-btn{
@@ -47,7 +47,7 @@
     border-radius: 5px;
     background-color: #0095F6;
     border: none;
-    color: azure;
+    color: rgb(0, 0, 0);
     margin-bottom: 5%;
 }
 .orDiv{
@@ -56,7 +56,7 @@
     align-items: center;
     justify-content: center;
     margin: 5%;
-    color: azure;
+    color: rgb(0, 0, 0);
 }
 .orDiv span {
     width: 50%;
@@ -66,8 +66,10 @@
     margin-right: 3px;
     margin-left: 3px;
 }
-input{
-    padding: 10px;
+.main-div input{
+    color: black;
+    font-weight: 600;
+    padding: 20px 5px;
     height: 10px;
     width: 70%;
     margin-top: 10px;
@@ -77,7 +79,7 @@ input{
     text-align: center;
     margin-top: 30px;
     color: rgb(119, 103, 103);
-    color: azure;
+    color: rgb(0, 0, 0);
 }
 
 .para2{
@@ -87,7 +89,6 @@ input{
     color: azure;
 }
 .signbtn{
-
     height: 30px;
     width: 35%;
     font-size: larger;
@@ -103,17 +104,17 @@ input{
     background-color: #0094f6be;
 }
 .loginContainer{
-    border: 1px solid rgb(207, 193, 193);
+    border: 1px solid rgb(0, 0, 0);
     height: 5vh;
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 335px;
-    color: rgb(119, 103, 103);
+    color: rgb(0, 0, 0);
 }
 .login-signup-btn-link{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 .forget-password{
     text-decoration: none;
@@ -123,11 +124,11 @@ input{
     cursor: pointer;
 }
 .forget-password span {
-    color: azure;
+    color: rgb(0, 0, 0);
 }
 .password-toggle-btn{
     background-color: rgba(245, 222, 179, 0);
-    color: azure;
+    color: rgb(0, 0, 0);
     margin-top: 10px;
     border: none;
     cursor: pointer;

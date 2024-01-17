@@ -66,11 +66,9 @@ nav ul li:hover {
   width: 20%;
 }
 .login-btn{
-  padding: 5px 10px;
-  font-size: 10px;
-  font-weight: 700;
-  border: none;
-  border-radius: 5px;
+  color: azure;
+  font-weight: 600;
+  font-size: 20px;
 }
 .bucket-btn {
   position: relative;
@@ -113,7 +111,7 @@ nav ul li:hover {
   display: inline-block;
   justify-content: center;
   align-items: center;
-  float:right
+  float:right;
 }
 
 .dropbtn {
@@ -122,7 +120,7 @@ nav ul li:hover {
   cursor: pointer;
 }
 .dropdown-content {
-  height: 150px;
+  height: fit-content;
   width: 20px;
   display: none;
   position: absolute;
@@ -131,6 +129,7 @@ nav ul li:hover {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(201, 194, 194, 0.407);
   z-index: 1;
+  color: black;
 }
 
 .linksTag-dropDown {
@@ -138,6 +137,7 @@ nav ul li:hover {
   text-decoration: none;
   color: azure;
   cursor: pointer;
+  color: black;
 }
 .linksTag-dropDown:hover {
   border-radius: 5px;
@@ -235,6 +235,11 @@ nav ul {
     font-size: 20px;
     height: 90%;
     border-radius: 10px;
+  }
+  .login-btn{
+    color: azure;
+    font-weight: 600;
+    font-size: 20px;
   }
 }
 
