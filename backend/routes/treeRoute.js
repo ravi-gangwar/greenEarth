@@ -64,10 +64,9 @@ router.get('/search-tree', async (req, res) => {
 // import { ObjectId } from 'mongodb';
 
 router.post('/addtree', async (req, res) => {
-  const {id, name, price, imageUrl, category, discription } = req.body;
+  const {name, price, imageUrl, category, discription } = req.body;
   try {
     const newTree = new treeModel({
-      id,
       name,
       price,
       imageUrl,

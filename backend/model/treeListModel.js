@@ -3,15 +3,10 @@ import mongoose from "mongoose";
 const {Schema} = mongoose;
 
 const treeListSchema = new Schema({
-    id: {
-        type: Number,
-        unique: true,
-        required: [true, "id should be unique"],
-    },
     name: {
         type: String,
         required: [true, 'tree name is Required'],
-        minLength: [5, "name min length 5 char"],
+        minLength: [3, "name min length 5 char"],
         maxLength: [30, "name must be less than 15 char"],
         trim: true
     },
