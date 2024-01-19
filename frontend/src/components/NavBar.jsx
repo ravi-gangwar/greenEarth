@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaBucket } from 'react-icons/fa6';
 import { useSelector } from 'react-redux';
 import '../style/navBar.css';
@@ -7,6 +7,8 @@ import { logoutAction } from '../actions/userAction';
 import { useDispatch } from 'react-redux';
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
+import { MdKeyboardBackspace } from "react-icons/md";
+
 
 function NavBar() {
   const bucketState = useSelector((state) => state.bucketReducer);
@@ -14,6 +16,8 @@ function NavBar() {
   const {currentUser} = userState;
   const isAdmin = currentUser && currentUser.data.isAdmin;
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
 
   const [sideBar, setSideBar] = useState(false);
   const handleSidebar = () => { 
@@ -39,6 +43,7 @@ function NavBar() {
   <>
     <nav id="navBarId" className={isSticky ? 'sticky' : ''}>
       <div id="logoId" className="logo">
+      <MdKeyboardBackspace className='go-back-navigate' onClick={()=> navigate(-1)}/>
         <Link className="link-div" to="/">
           <img src="https://github.com/ravi-gangwar/greenEarth/blob/main/frontend/src/assets/green-earth.png?raw=true" alt="" />
         </Link>

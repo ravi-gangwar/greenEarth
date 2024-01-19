@@ -241,7 +241,7 @@ const Login = () => {
                             {/* <div className='orDiv'><span><hr/></span><p>OR</p><span><hr/></span></div> */}
                             {state==="Log In" ? 
                                 <button className='signbtn' type='' onClick={handleLogin}>Log In</button> :
-                                <button className='signbtn' type={loading === true ? "button" : "submit"} disabled={loading === true} onClick={handleSignup}>
+                                <button className='signbtn' onKeyDown={(e) => e.key === 'Enter' && handleSignup} type={loading === true ? "button" : "submit"} disabled={loading === true} onClick={handleSignup}>
                                     {loading ? <Loader/> : success ? "Sign Up Successfull" : "Sign Up" }
                                 </button>
 

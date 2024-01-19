@@ -13,6 +13,7 @@ box-shadow: 0px 2px 5px rgba(152, 152, 152, 0.742);
   
 }
 nav{
+  position: relative;
   height: 5vh;
   min-width: 100vw;
   background-color: #722DF9;
@@ -22,6 +23,13 @@ nav{
   font-weight: 700;
   box-shadow: 0px 2px 5px rgba(152, 152, 152, 0.742); 
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.go-back-navigate{
+  position: absolute;
+  left: 20px;
+  font-size: 35px;
+  color: aliceblue;
+  cursor: pointer;
 }
 .logo{
   height: 100%;
@@ -92,7 +100,6 @@ nav ul li:hover {
   background-color: rgb(238, 108, 77);
   padding: 0 5px;
   border-radius: 50%;
-  color: azure;
   display: flex;
   justify-content: center;
   align-items: center;

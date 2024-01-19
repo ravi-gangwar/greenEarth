@@ -2,7 +2,7 @@
 
 .user-list-container {
   min-height: 100vh;
-    max-width: 800px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 20px;
   }
@@ -14,7 +14,9 @@
   table {
     width: 100%;
     border-collapse: collapse;
+    color: azure;
     margin-top: 20px;
+
   }
   
   th, td {

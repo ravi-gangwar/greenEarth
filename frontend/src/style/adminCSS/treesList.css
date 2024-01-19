@@ -10,6 +10,9 @@
     border-collapse: collapse;
     margin-top: 20px;
   }
+  .tree-table th{
+    color: azure;
+  }
   
   .tree-table th, .tree-table td {
     border: 1px solid #ddd;

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
-import Treecard from '../Treecard'
+import Treecard from '../Treecard.jsx'
 import "../../style/home.css"
 import {useDispatch, useSelector} from 'react-redux';
 import { getAllTree } from '../../actions/treeAction';

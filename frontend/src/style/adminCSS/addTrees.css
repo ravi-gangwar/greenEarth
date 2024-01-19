@@ -3,6 +3,7 @@
 .add-tree-container {
   overflow: auto;
   display: flex;
+  color: black;
     justify-content: center;
     max-width: 90%;
     height: fit-content;
@@ -10,6 +11,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
   }
+
 .add-tree-container-2{
   display: flex;
   flex-direction: column;
@@ -20,9 +22,11 @@
   
   .admin-h2 {
     text-align: center;
+    color: black;
+    font-weight: 700;
   }
   
-  form {
+  .add-tree-container-2 form {
     display: flex;
     flex-direction: column;
   }
@@ -33,6 +37,7 @@
     box-sizing: border-box;
     font-size: 20px;
     border-radius: 5px;
+    font-weight: 600;
   }
   .admin-textarea1 {
     height: 300px;
@@ -46,7 +51,8 @@
   .admin-submit-btn {
     background-color: #4caf50;
     width: 90%;
-    color: #fff;
+    color: black;
+    font-weight: 600;
     border: none;
     padding: 10px;
     cursor: pointer;

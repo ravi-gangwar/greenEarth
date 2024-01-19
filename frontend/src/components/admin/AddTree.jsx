@@ -3,19 +3,14 @@ import "../../style/adminCSS/addTrees.css"
 import { addTree } from '../../actions/treeAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getAllTree } from '../../actions/treeAction';
 
 
 const AddTree = () => {
   const dispatch = useDispatch();
-  const treestate = useSelector(state => state.treeReducer);
-  const { trees } = treestate;
-  const [treeLen, setTreeLen] = useState(trees.length);
     
   const addTreestate = useSelector((state) => state.addTreeReducer) || {};
   const { loading, error, success } = addTreestate;
   const [treeData, setTreeData] = useState({
-    id: treeLen+1,
     name: '',
     price: '',
     discription: '',
@@ -35,22 +30,24 @@ const AddTree = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTree(treeData));
-    setTreeData({
-      name: '',
-      price: '',
-      discription: '',
-      category: '',
-      imageUrl: ''
-    });
+    if(treeData.name && treeData.price && treeData.discription && treeData.category && treeData.imageUrl){
+      dispatch(addTree(treeData));
+    }else{
+      alert("Fill all Fields!!")
+    }
   };
   useEffect(()=> {
-    setTreeLen(trees.length)
-  }, [dispatch])
+    if(success){
+      setTreeData({
+        name: '',
+        price: '',
+        discription: '',
+        category: '',
+        imageUrl: ''
+      });
+    }
+  }, [dispatch, success])
 
-  useEffect(() => {
-    dispatch(getAllTree());
-  }, []);
 
   return (
     <>{error ? <div className="error">{error}</div> : success ? <div className="success">Tree added successfully!</div> :

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllTree } from '../../actions/treeAction';
@@ -13,9 +13,24 @@ function TreeList() {
   const deleteTreeState = useSelector((state) => state.deleteTreeByIdReducer);
   const {/*deleteError,*/ deleteLoading, deleteSuccess} = deleteTreeState;
 
+  const [page, setPage] = useState(1);
+  const handlePrev = () => {
+    if (page > 1) {
+      setPage(page - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (page * 15 > totalDocuments) {
+      alert("No more data to show");
+    } else {
+      setPage(page + 1);
+    }
+  };
+
   useEffect(() => {
-    dispatch(getAllTree());
-  }, [dispatch]);
+    dispatch(getAllTree(page));
+  }, [page]);
 
   const handleDeleteTree = (deleteTreeId)=>{
     dispatch(deleteTree(deleteTreeId));
@@ -71,8 +86,16 @@ function TreeList() {
             ))
           )}
         </tbody>
-      </table>
+      </table> 
     }
+        <div className='loadmoreBtns'>
+        <button className='prevNext' onClick={handlePrev}>
+          Prev
+        </button>
+        <button className={page * 15 > totalDocuments ? "preNextDanger" : "prevNext"} onClick={handleNext}>
+          {page * 15 > totalDocuments ? "No more data to show" : "Next"}
+        </button>
+      </div>
     </>
   );
 }
