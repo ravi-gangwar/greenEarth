@@ -10,7 +10,6 @@ background-color: rgba(0, 0, 0, 0.792);
 backdrop-filter: blur;
 font-weight: 700;
 box-shadow: 0px 2px 5px rgba(152, 152, 152, 0.742); 
-  
 }
 nav{
   position: relative;
@@ -25,8 +24,6 @@ nav{
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .go-back-navigate{
-  position: absolute;
-  left: 20px;
   font-size: 35px;
   color: aliceblue;
   cursor: pointer;
@@ -36,7 +33,7 @@ nav{
   width: 10%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .logo img{
@@ -245,6 +242,34 @@ nav ul {
     color: azure;
     font-weight: 600;
     font-size: 20px;
+  }
+  .logo{
+    width: 30%;
+  }
+}
+
+@media (min-width : 431px) and (max-width: 611Px) {
+  .navBar-btns{
+    gap: 10px;
+    width: 45%;
+  }
+  .userIcon {
+    height: 40px;
+    width: 40px;
+  }
+  .inner-side-bar-div{
+    font-size: 15px;
+    font-size: 20px;
+    height: 90%;
+    border-radius: 10px;
+  }
+  .login-btn{
+    color: azure;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .logo{
+    width: 30%;
   }
 }
 

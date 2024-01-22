@@ -79,3 +79,9 @@
         flex-basis: 43%;
     }
 }
+
+@media (min-width : 431px) and (max-width: 611Px){
+    .main-card{
+        flex-basis: 43%;
+    }
+}
