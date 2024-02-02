@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { garderAction } from '../actions/gadernAction';
 import "../style/garden.css"
@@ -37,7 +37,9 @@ function Garden() {
         allTrees.map((tree, index) => 
         (
           <div className='garden-card' key={index}>
-            <img className='garden-tree-img' src={tree.imageUrl} alt={tree.name}></img>
+            <Link to={`/tree-growth-track/${tree._id}`}>
+              <img className='garden-tree-img' src={tree.imageUrl} alt={tree.name}></img>
+            </Link>
             <h1 className='garden-h1'>{tree.name}</h1>
           </div>
 

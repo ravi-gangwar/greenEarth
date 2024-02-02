@@ -44,9 +44,7 @@ const PlantTree = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(currentUser.data.isAdmin){
-      alert("You are not allowed to place order")
-    }else if(formData.name === "" || formData.email === "" || formData.phoneNumber === "" || formData.state === "" || formData.city === "" || formData.pincode === "" || formData.address === "" || formData.landmark === ""){
+    if(formData.name === "" || formData.email === "" || formData.phoneNumber === "" || formData.state === "" || formData.city === "" || formData.pincode === "" || formData.address === "" || formData.landmark === ""){
       alert("Please fill all the fields")
     }else{
         makePayment();

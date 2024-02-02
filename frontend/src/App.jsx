@@ -30,6 +30,7 @@ import Garden from './page/Garden';
 import Footer from './components/Footer';
 import axios from 'axios';
 import { useEffect } from 'react';
+import TreeGrowth from './page/TreeGrowth.jsx';
 
 function App() {
   const userState = useSelector(state => state.loginUserReducer);
@@ -83,6 +84,7 @@ function App() {
                 <Route path='/profile' element={<UserProfile/>}/>
                 <Route path='/get-membership' element={<GetMembership/>}/>
                 <Route path='/plant-tree/:treeId' element={<PlantTree/>}/>
+                <Route path='/tree-growth-track/:treeId' element={<TreeGrowth/>}/>
               </> : ""
             }
     

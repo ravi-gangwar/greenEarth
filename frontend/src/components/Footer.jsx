@@ -99,8 +99,8 @@ const Footer = () => {
             <Link to={"https://twitter.com/_Ravi_Gangwar"} target="_blank"><FaTwitter className="links-fopter"/></Link>
             <Link to={"https://www.linkedin.com/in/ravi-gangwar/"} target="_blank"><FaLinkedin className="links-fopter"/></Link>
             <Link to={"https://twitter.com/_Ravi_Gangwar"} target="_blank"><FaFacebook className="links-fopter"/></Link>
-            <Link to={"https://www.instagram.com/_ravi_gangwar/"} target="_blank"><FaInstagram className="links-fopter"/></Link>
-            <Link to={""} target="_blank"><FaWhatsappSquare className="links-fopter"/></Link>
+            <Link to={"https://www.instagram.com/ravi.io/"} target="_blank"><FaInstagram className="links-fopter"/></Link>
+            <Link to={"https://wa.me/+919389968605"} target="_blank"><FaWhatsappSquare className="links-fopter"/></Link>
         </div>
       </div>
     </footer>
