@@ -106,7 +106,7 @@ function NavBar() {
               <p onClick={()=> setSideBar(!sideBar)}>Garden</p>
             </Link>
               <Link className="link-div" to={currentUser ? "/orders" : "/login"}> <p onClick={()=> setSideBar(!sideBar)}>Orders</p></Link>
-              {isAdmin === true ? <Link to="/admin">
+              {isAdmin === true || currentUser?.data.isWorker === true ? <Link to="/admin">
                 <p onClick={()=> setSideBar(!sideBar)}>Dashboard</p>
               </Link> : null}
                 <Link className="link-div" to="/contact">
