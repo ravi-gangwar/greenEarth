@@ -17,7 +17,7 @@ function NavBar() {
   const isAdmin = currentUser && currentUser.data.isAdmin;
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  console.log(currentUser);
 
   const [sideBar, setSideBar] = useState(false);
   const handleSidebar = () => { 
@@ -58,7 +58,7 @@ function NavBar() {
         <Link className="link-div" to="/orders"> <li>Orders</li></Link>
         </> 
          : <></>}
-        {isAdmin === true ? <Link to="/admin">
+        {isAdmin || currentUser?.data.isWorker === true ? <Link to="/admin">
           <li>Dashboard</li>
         </Link> : null}
         <Link className="link-div" to="/contact">
@@ -73,7 +73,7 @@ function NavBar() {
         <>
         <div className="dropdown">
           <button className="dropbtn">
-          <img src={currentUser.data.avatar || "https://i.pinimg.com/564x/e8/7a/b0/e87ab0a15b2b65662020e614f7e05ef1.jpg"} className='userIcon' onMouseOver={() =>sideBar === true ? setSideBar(false) : ""} onClick={() => sideBar === true ? setSideBar(false) : ""}/>
+          <img src={currentUser.data.avatar || "https://i.pinimg.com/564x/e8/7a/b0/e87ab0a15b2b65662020e614f7e05ef1.jpg"} className='userIcon' onClick={() => sideBar === true ? setSideBar(false) : ""}/>
           </button>
             <div className="dropdown-content">
             <Link className="linksTag-dropDown" to="/profile">Profile</Link>

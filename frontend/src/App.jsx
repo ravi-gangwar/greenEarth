@@ -87,8 +87,9 @@ function App() {
                 <Route path='/tree-growth-track/:treeId' element={<TreeGrowth/>}/>
               </> : ""
             }
-    
-            {isAdmin ? 
+
+
+            {isAdmin || currentUser?.data.isWorker  ? 
             <>
             <Route path='/admin/users' element={<UserList/>}/>
             <Route path='/admin' element={<AdminScreen/>}/>
