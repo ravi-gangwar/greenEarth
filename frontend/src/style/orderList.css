@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: space-around;
   border-radius: 5px;
-  background-color: #059e00;
+  background-color: #059e00a2;
   box-shadow: 0px 10px 30px #7e7e7eb4;
 }
 
@@ -49,7 +49,7 @@
   font-weight: 600;
   justify-content: space-around;
   border-radius: 5px;
-  background-color: #ff0000;
+  background-color: #a33d3dcc;
   box-shadow: 0px 0x 30px #000000;
 }
 

@@ -22,12 +22,12 @@
 .ContactContainer{
     display: flex;
     width: 80%;
-    height: fit-content;
+    height: 90%;
     border-radius: 100px 0 0 20px;
     font-weight: 500;
 }
 .contact-left{
-    height: fit-content;
+    min-height: 100%;
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -79,6 +79,7 @@
     display: flex;
     padding: 10px;
     flex-direction: column;
+    min-height: 100%;
 }
 .contact-right h3{
     font-size: 45px;

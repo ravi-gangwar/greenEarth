@@ -17,7 +17,6 @@ function NavBar() {
   const isAdmin = currentUser && currentUser.data.isAdmin;
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(currentUser);
 
   const [sideBar, setSideBar] = useState(false);
   const handleSidebar = () => { 
