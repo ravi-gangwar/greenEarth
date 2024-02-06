@@ -81,7 +81,7 @@ orderRouter.post('/get-membership', async (req, res) => {
                     product_data: {
                         name: 'Basic Membership',
                     },
-                    unit_amount: 199 * 100,
+                    unit_amount: 299 * 100,
                 },
                 quantity: 1,
             });

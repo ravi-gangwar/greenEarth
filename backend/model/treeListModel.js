@@ -3,6 +3,10 @@ import mongoose from "mongoose";
 const {Schema} = mongoose;
 
 const treeListSchema = new Schema({
+    id: {
+        type: Number,
+        required: [true, "tree is needed"],
+    },
     name: {
         type: String,
         required: [true, 'tree name is Required'],
@@ -21,7 +25,7 @@ const treeListSchema = new Schema({
         type: String,
         required: [true, "tree imageURL must be required"],
     },
-    discription: {
+    description: {
         type: String,
         maxLength: [2000, "name must be less than 1000 char"],
     }
