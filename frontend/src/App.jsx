@@ -31,7 +31,6 @@ import Footer from './components/Footer';
 import axios from 'axios';
 import { useEffect } from 'react';
 import TreeGrowth from './page/TreeGrowth.jsx';
-import WebsiteDown from './page/WebsiteDown.jsx';
 
 function App() {
   const userState = useSelector(state => state.loginUserReducer);
@@ -67,11 +66,9 @@ function App() {
     <>{
       (
         <BrowserRouter>
-
-          {/* <NavBar/> */}
+          <NavBar/>
           <Routes>
-          <Route path='/' element={<WebsiteDown/>}/>
-            {/* <Route path='/' element={<Home/>}/>
+            <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/> 
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/bucket' element={<BucketPage/>}/>
@@ -101,9 +98,9 @@ function App() {
             <Route path='/admin/orders' element={<AdminOrders/>}/>
             <Route path='/admin/edit-tree/:treeId' element={<EditTree/>}/>
             <Route path='/admin/user-messages' element={<UserMessages/>}/>
-            </> : ""} */}
+            </> : ""}
           </Routes>
-            {/* <Footer/> */}
+            <Footer/>
         </BrowserRouter>
 
       )

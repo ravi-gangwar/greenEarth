@@ -1,16 +1,22 @@
 import { useState } from 'react';
 import "../../style/adminCSS/addTrees.css"
-import { addTree } from '../../actions/treeAction';
+import { addTree, getAllTree } from '../../actions/treeAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
 
 const AddTree = () => {
   const dispatch = useDispatch();
+
+
+  const treestate = useSelector(state => state.treeReducer);
+  const { trees} = treestate;
+  const {totalDocuments} = trees;
     
   const addTreestate = useSelector((state) => state.addTreeReducer) || {};
   const { loading, error, success } = addTreestate;
   const [treeData, setTreeData] = useState({
+    id: totalDocuments+1,
     name: '',
     price: '',
     description: '',
@@ -32,13 +38,16 @@ const AddTree = () => {
     e.preventDefault();
     if(treeData.name && treeData.price && treeData.description && treeData.category && treeData.imageUrl){
       dispatch(addTree(treeData));
+
     }else{
       alert("Fill all Fields!!")
     }
   };
   useEffect(()=> {
+    dispatch(getAllTree(1));
     if(success){
       setTreeData({
+        id: totalDocuments+1,
         name: '',
         price: '',
         description: '',
@@ -46,7 +55,7 @@ const AddTree = () => {
         imageUrl: ''
       });
     }
-  }, [dispatch, success])
+  }, [totalDocuments, dispatch, success])
 
 
   return (
@@ -55,6 +64,7 @@ const AddTree = () => {
       <div className='add-tree-container-2'>
         <h2 className='admin-h2'>Add Tree</h2>
         <form onSubmit={handleSubmit}>
+        <input className='admin-addtree-input1' type="number" placeholder='Tree Id' name="id" value={treeData.id} onChange={handleChange} />
         <input className='admin-addtree-input1' type="text" placeholder='Tree name' name="name" value={treeData.name} onChange={handleChange} />
         <input className='admin-addtree-input1' type="url" placeholder="Image-url" name="imageUrl" value={treeData.imageUrl} onChange={handleChange} />
         <input className='admin-addtree-input1' type="text" placeholder='Price' name="price" value={treeData.price} onChange={handleChange} />
