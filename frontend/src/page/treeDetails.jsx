@@ -33,9 +33,9 @@ function TreeDetails() {
     tree ? <div className="tree-details-container">
     <img src={tree.imageUrl} alt={tree.name} />
       <h1>{tree.name}</h1>
-      <p>Category: {tree.categeory}</p>
+      <p>Category: {tree.category}</p>
       <p>Price: Rs.{tree.price}/-</p>
-      <p>Description: {tree.discription}</p>
+      <p>Description: {tree.description}</p>
       <button onClick={handlePlantButtonClick}>Plant</button>
       <button onClick={handleAddToBucketButtonClick}>Add to Bucket</button>
     </div> : <div>Loading...</div> }

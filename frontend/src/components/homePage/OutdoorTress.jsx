@@ -8,7 +8,8 @@ function OutdoorTrees() {
     const dispatch = useDispatch();
     const treestate = useSelector(state => state.getTreeWithTypeReducer);
     const { tree, loading, error } = treestate;
-    const outdoorTreesList = tree.filter(tree => tree.categeory === "outdoor");
+    console.log(tree)
+    const outdoorTreesList = tree.filter(tree => tree.category === "outdoor");
     
     useEffect(() => {
       dispatch(getTreeWithType());

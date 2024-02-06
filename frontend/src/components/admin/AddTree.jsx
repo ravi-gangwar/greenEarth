@@ -13,7 +13,7 @@ const AddTree = () => {
   const [treeData, setTreeData] = useState({
     name: '',
     price: '',
-    discription: '',
+    description: '',
     category: '',
     imageUrl: ''
   });
@@ -30,7 +30,7 @@ const AddTree = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(treeData.name && treeData.price && treeData.discription && treeData.category && treeData.imageUrl){
+    if(treeData.name && treeData.price && treeData.description && treeData.category && treeData.imageUrl){
       dispatch(addTree(treeData));
     }else{
       alert("Fill all Fields!!")
@@ -41,7 +41,7 @@ const AddTree = () => {
       setTreeData({
         name: '',
         price: '',
-        discription: '',
+        description: '',
         category: '',
         imageUrl: ''
       });
@@ -59,7 +59,7 @@ const AddTree = () => {
         <input className='admin-addtree-input1' type="url" placeholder="Image-url" name="imageUrl" value={treeData.imageUrl} onChange={handleChange} />
         <input className='admin-addtree-input1' type="text" placeholder='Price' name="price" value={treeData.price} onChange={handleChange} />
         <input className='admin-addtree-input1' type="text" placeholder='Category: indoor / outdoor' name="category" value={treeData.category} onChange={handleChange} />
-        <textarea className='admin-textarea1' name="discription" placeholder='Discription' value={treeData.discription} onChange={handleChange} />
+        <textarea className='admin-textarea1' name="description" placeholder='Description' value={treeData.description} onChange={handleChange} />
         <button className='admin-submit-btn' type="submit">{loading ? 'Loading...' : 'Add Tree'}</button>
         </form>
       </div>

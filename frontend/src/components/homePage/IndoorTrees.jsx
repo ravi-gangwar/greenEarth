@@ -8,7 +8,7 @@ function IndoorTrees() {
     const dispatch = useDispatch();
     const treestate = useSelector(state => state.getTreeWithTypeReducer);
     const { tree, loading, error } = treestate;
-    const indoorTreesList = tree.filter(tree => tree.categeory === "indoor");
+    const indoorTreesList = tree.filter(tree => tree.category === "indoor");
     useEffect(() => {
       dispatch(getTreeWithType());
     }, []);

@@ -52,8 +52,8 @@ function TreeList() {
             <th>Image</th>
             <th>Name</th>
             <th>Price</th>
-            <th>Discription</th>
-            <th>Categeory</th>
+            <th>Description</th>
+            <th>Category</th>
             <th className='actionHead'>Action</th>
           </tr>
         </thead>
@@ -76,8 +76,8 @@ function TreeList() {
                 <td><a href={tree.imageUrl} target='_blanck'>Image</a></td>
                 <td>{tree.name}</td>
                 <td>{tree.price}</td>
-                <td>{tree.discription}</td>
-                <td>{tree.categeory}</td>
+                <td>{tree.description}</td>
+                <td>{tree.category}</td>
                 <td>
                 <Link className='editTree-btn-admin' to={`/admin/edit-tree/${tree._id}`}><button>Edit</button></Link>
                 <button className="delete-btn" onClick={() => handleDeleteTree(tree._id)}>{deleteLoading ? "Deleting..." : "Delete"}</button>

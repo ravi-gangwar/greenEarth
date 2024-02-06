@@ -22,7 +22,7 @@ function EditTree() {
     imageUrl: '',
     price: '',
     category: '',
-    discription: '',
+    description: '',
     _id: ''
   });
   
@@ -32,8 +32,8 @@ function EditTree() {
         name: tree.name || '',
         imageUrl: tree.imageUrl || '',
         price: tree.price || '',
-        categeory: tree.categeory || '',
-        discription: tree.discription || '',
+        category: tree.category || '',
+        description: tree.description || '',
         _id: tree._id || ''
       });
     }
@@ -41,8 +41,8 @@ function EditTree() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, imageUrl, price, categeory, discription, _id } = treeData;
-    if (name && imageUrl && price && categeory && discription && _id) {
+    const { name, imageUrl, price, category, description, _id } = treeData;
+    if (name && imageUrl && price && category && description && _id) {
       dispatch(updateTree(treeData));
     }else{
       alert("Please fill all the fields")
@@ -94,14 +94,14 @@ function EditTree() {
         </label>
   
 
-        <label className='admit-editTree-labels' htmlFor="categeory">
-        Categeory:
+        <label className='admit-editTree-labels' htmlFor="category">
+        Category:
         <input
           type="text"
           id="category"
           name="category"
-          value={treeData.categeory}
-          onChange={(e) => setTreeData({ ...treeData, categeory: e.target.value })}
+          value={treeData.category}
+          onChange={(e) => setTreeData({ ...treeData, category: e.target.value })}
           className='admin-editTree-inputs'
         />
         </label>
@@ -112,8 +112,8 @@ function EditTree() {
           <textarea
           id="description"
           name="description"
-          value={treeData.discription}
-          onChange={(e) => setTreeData({ ...treeData, discription: e.target.value })}
+          value={treeData.description}
+          onChange={(e) => setTreeData({ ...treeData, description: e.target.value })}
           className='admin-editTree-textarea'
         />
         </label>
