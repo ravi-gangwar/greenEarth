@@ -9,6 +9,9 @@
 .all-membership-div{
     height: fit-content;
 }
+.all-membership-div table {
+    background-color: #000000;
+}
 .all-membership-div table th {
     font-size: 30px;
     background-color: #f66642b6;
