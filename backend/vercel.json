@@ -12,7 +12,7 @@
         "dest": "./server.js",
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "headers": {
-          "Access-Control-Allow-Origin": "https://green-earth-chi.vercel.app/"
+          "Access-Control-Allow-Origin": "https://green-earth-pink.vercel.app/"
         }
       }
     ]
