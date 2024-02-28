@@ -39,24 +39,20 @@ Let's plant a better future, together!
 
 
 ## Installation
-
-To install greenEarth, follow these steps:
-
-1. clone git repo
-2. install npm in frontend and backed
-3. for run frontend : npm run dev 
-4. for run backend : npm run server
-
+### To install greenEarth, follow these steps:
+### 1. clone git repo
+### 2. install npm in frontend and backed
+   npm i
+### 3. for run frontend 
+   npm run dev
+### 4. for run backend
+   npm run server
 ## Configuration    
-
-    you need a dotENV file for both frontend and backed like given example.env file 
+you need a dotENV file for both frontend and backed like given example.env file 
 
 ## Credits
 
->> Vaishnavi Katiyar
->> kaushiki Tripathi
->> Anand Kumar
-
+>> Vaishnavi Katiyar, Kaushiki Tripathi, Anand Kumar
 
 ## Contact
 
