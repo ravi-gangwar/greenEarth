@@ -1,7 +1,7 @@
 # greenEarth
 
 **Description:**  
-In a world where pollution is an ever-growing concern, we introduce "Planting for Tomorrow" – a revolutionary system aimed at combating environmental degradation. Our platform offers a seamless experience for ordering trees of your choice and having them planted at your desired location. Whether you're an individual seeking to make a positive impact or a business looking to contribute to greener initiatives, we've got you covered. 
+In a world where pollution is an ever-growing concern, we introduce "greenEarth" – a revolutionary system aimed at combating environmental degradation. Our platform offers a seamless experience for ordering trees of your choice and having them planted at your desired location. Whether you're an individual seeking to make a positive impact or a business looking to contribute to greener initiatives, we've got you covered. 
 
 ## Key Features:
 
