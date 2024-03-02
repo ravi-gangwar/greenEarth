@@ -42,7 +42,7 @@ function ListAllTress() {
         <>
           <div className='card-div'>
             {Array.isArray(treeList) &&
-              treeList.map((tree, index) => (
+              treeList?.map((tree, index) => (
                  <Treecard key={index} tree={tree} />
               ))}
           </div>
