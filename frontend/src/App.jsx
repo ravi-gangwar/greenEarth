@@ -66,7 +66,7 @@ function App() {
     <>{
       (
         <BrowserRouter>
-          <NavBar/>
+          {currentUser ? <NavBar/> : ""}
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/> 
