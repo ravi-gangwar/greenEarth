@@ -137,7 +137,7 @@ const Login = () => {
             {
             loginLoading || otpVerifyloading || changePasswordloading ? <Loader/> : 
         <div className='main-div'>
-        <h1 className='absolute top-0 mt-10 text-5xl text-zinc-900'>Welcome to GreenEarth</h1>
+  
            <div className='login-container'>
             <div className='container-2nd'>
                 <h5 className='h5-fisrt'>greenEarth</h5>
